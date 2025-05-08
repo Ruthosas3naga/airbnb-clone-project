@@ -22,27 +22,54 @@ PostgreSQL: PostgreSQL is a powerful, open-source relational database used to st
 GraphQL: GraphQL is a query language for APIs and a runtime for executing those queries with your existing data. Allows clients to request exactly the data they need. It reduces over-fetching or under-fetching of data (unlike REST).Provides a single endpoint for querying complex, nested data -->
 
 <!-- Database Design
-Users:GET /users/ - List all users
-    POST /users/ - Create a new user
-    GET /users/{user_id}/ - Retrieve a specific user
-    PUT /users/{user_id}/ - Update a specific user
-    DELETE /users/{user_id}/ - Delete a specific user
-Properties: GET /properties/ - List all properties
-    POST /properties/ - Create a new property
-    GET /properties/{property_id}/ - Retrieve a specific property
-    PUT /properties/{property_id}/ - Update a specific property
-    DELETE /properties/{property_id}/ - Delete a specific property
-Bookings:GET /bookings/ - List all bookings
-    POST /bookings/ - Create a new booking
-    GET /bookings/{booking_id}/ - Retrieve a specific booking
-    PUT /bookings/{booking_id}/ - Update a specific booking
-    DELETE /bookings/{booking_id}/ - Delete a specific booking
-Reviews: GET /reviews/ - List all reviews
-    POST /reviews/ - Create a new review
-    GET /reviews/{review_id}/ - Retrieve a specific review
-    PUT /reviews/{review_id}/ - Update a specific review
-    DELETE /reviews/{review_id}/ - Delete a specific review
+Users:Represents people who use the platform (e.g., renters, property owners).
+id: Unique identifier (primary key)
+name: Full name of the user
+email: Unique email address
+password_hash: Encrypted password
+role: Can be renter or owner
+Relationships:
+A user can list multiple properties
+A user can make multiple bookings
+A user can leave multiple reviews
+
+Properties: Represents places listed for booking.
+id: Unique identifier
+title: Name of the property
+description: Detailed description
+location: Address or city
+price_per_night: Cost to rent per night
+owner_id: References the id of a user (owner)
+Relationships:
+A property belongs to one user
+A property can have multiple bookings
+A property can have multiple reviews
+
+Bookings:Represents reservation information.
+id: Unique identifier
+user_id: The renter who made the booking
+property_id: The property being booked
+start_date: Booking start date
+end_date: Booking end date
+Relationships:
+A booking belongs to one user
+A booking belongs to one property
+
+Reviews: Represents user feedback on properties.
+id: Unique identifier
+user_id: Reviewer (user)
+property_id: Reviewed property
+rating: Numeric score (e.g., 1-5)
+comment: Text feedback
+Relationships:
+A review belongs to one user
+A review belongs to one property
+
 Payments:
-    POST /payments/ - Process a payment
-    GET /payments/ {payment_id} - Retrieve a specific payment
-    DELETE /payments/ {payment_id} - Delete a specific payment -->
+id: Unique identifier
+booking_id: The associated booking
+amount: Total payment amount
+status: Paid, pending, failed
+payment_date: Timestamp of payment
+Relationships:
+A payment belongs to one booking

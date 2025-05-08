@@ -20,3 +20,29 @@ UI/UX designer: Transforms a product vision into user-friendly designs.Creates u
 Django: Handles routing (URLs), views, and templates, Manages databases with its built-in ORM. Includes built-in authentication, admin panel, and security features.
 PostgreSQL: PostgreSQL is a powerful, open-source relational database used to store and manage data. It stores structured data (tables, rows). Supports advanced queries, indexing, and data types, ensures data integrity, reliability, and performance.
 GraphQL: GraphQL is a query language for APIs and a runtime for executing those queries with your existing data. Allows clients to request exactly the data they need. It reduces over-fetching or under-fetching of data (unlike REST).Provides a single endpoint for querying complex, nested data -->
+
+Database Design
+Users:GET /users/ - List all users
+    POST /users/ - Create a new user
+    GET /users/{user_id}/ - Retrieve a specific user
+    PUT /users/{user_id}/ - Update a specific user
+    DELETE /users/{user_id}/ - Delete a specific user
+Properties: GET /properties/ - List all properties
+    POST /properties/ - Create a new property
+    GET /properties/{property_id}/ - Retrieve a specific property
+    PUT /properties/{property_id}/ - Update a specific property
+    DELETE /properties/{property_id}/ - Delete a specific property
+Bookings:GET /bookings/ - List all bookings
+    POST /bookings/ - Create a new booking
+    GET /bookings/{booking_id}/ - Retrieve a specific booking
+    PUT /bookings/{booking_id}/ - Update a specific booking
+    DELETE /bookings/{booking_id}/ - Delete a specific booking
+Reviews: GET /reviews/ - List all reviews
+    POST /reviews/ - Create a new review
+    GET /reviews/{review_id}/ - Retrieve a specific review
+    PUT /reviews/{review_id}/ - Update a specific review
+    DELETE /reviews/{review_id}/ - Delete a specific review
+Payments:
+    POST /payments/ - Process a payment
+    GET /payments/ {payment_id} - Retrieve a specific payment
+    DELETE /payments/ {payment_id} - Delete a specific payment

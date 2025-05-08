@@ -73,3 +73,5 @@ status: Paid, pending, failed
 payment_date: Timestamp of payment
 Relationships:
 A payment belongs to one booking
+
+Feature Breakdown

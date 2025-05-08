@@ -21,7 +21,7 @@ Django: Handles routing (URLs), views, and templates, Manages databases with its
 PostgreSQL: PostgreSQL is a powerful, open-source relational database used to store and manage data. It stores structured data (tables, rows). Supports advanced queries, indexing, and data types, ensures data integrity, reliability, and performance.
 GraphQL: GraphQL is a query language for APIs and a runtime for executing those queries with your existing data. Allows clients to request exactly the data they need. It reduces over-fetching or under-fetching of data (unlike REST).Provides a single endpoint for querying complex, nested data -->
 
-Database Design
+<!-- Database Design
 Users:GET /users/ - List all users
     POST /users/ - Create a new user
     GET /users/{user_id}/ - Retrieve a specific user
@@ -45,4 +45,4 @@ Reviews: GET /reviews/ - List all reviews
 Payments:
     POST /payments/ - Process a payment
     GET /payments/ {payment_id} - Retrieve a specific payment
-    DELETE /payments/ {payment_id} - Delete a specific payment
+    DELETE /payments/ {payment_id} - Delete a specific payment -->

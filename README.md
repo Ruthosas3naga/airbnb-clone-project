@@ -15,3 +15,8 @@ frontend developer: Front-end developers create the part of an application that 
 Databas Administrator: Manages and maintains databases used by applications.
 Project manager (PM): Makes sure a product or its part is delivered on time and within budget. Manages and motivates the software development team.
 UI/UX designer: Transforms a product vision into user-friendly designs.Creates user journeys for the best user experience and highest conversion rates --> 
+
+<!-- Technology Stack
+Django: Handles routing (URLs), views, and templates, Manages databases with its built-in ORM. Includes built-in authentication, admin panel, and security features.
+PostgreSQL: PostgreSQL is a powerful, open-source relational database used to store and manage data. It stores structured data (tables, rows). Supports advanced queries, indexing, and data types, ensures data integrity, reliability, and performance.
+GraphQL: GraphQL is a query language for APIs and a runtime for executing those queries with your existing data. Allows clients to request exactly the data they need. It reduces over-fetching or under-fetching of data (unlike REST).Provides a single endpoint for querying complex, nested data -->

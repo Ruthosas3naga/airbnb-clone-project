@@ -97,3 +97,34 @@ Features: Post and manage reviews for properties.
 7. Database Optimizations
 Indexing: Implement indexes for fast retrieval of frequently accessed data.
 Caching: Use caching strategies to reduce database load and improve performance.
+
+API Security
+Ensuring the security of our API is critical to protect user data, prevent abuse, and maintain trust. Below are the key security measures we will implement:
+
+1. Authentication
+We will use JWT (JSON Web Tokens) or OAuth 2.0 to verify the identity of users accessing the API.
+Why it's important: Prevents unauthorized users from accessing protected endpoints and ensures only valid users can perform actions like booking properties or making payments.
+
+2. Authorization
+Role-based access control (RBAC) will be enforced to distinguish between different user roles (e.g., admin, owner, renter) and their permissions.
+Why it's important: Ensures that users can only access and modify resources they own (e.g., an owner should not edit another owner's property).
+
+3. Rate Limiting
+Limits the number of requests a user/IP can make in a certain time period using tools like Django Ratelimit or API Gateway throttling.
+Why it's important: Prevents abuse, brute-force attacks, and denial of service (DoS) attacks that could degrade service or compromise security.
+
+4. Data Validation & Sanitization
+All input from users will be validated and sanitized to prevent injection attacks (SQL, XSS).
+Why it's important: Prevents malicious users from injecting harmful data or scripts into the system.
+
+5. HTTPS Only
+The API will only be accessible over HTTPS to ensure encrypted data transmission.
+Why it's important: Protects sensitive information like login credentials and payment data from being intercepted.
+
+6. Secure Payment Integration
+Payments will be handled via a secure third-party processor (e.g., Stripe, PayPal) with tokenized transactions.
+Why it's important: Ensures that financial transactions are protected and reduces our liability for storing sensitive payment information.
+
+7. Logging and Monitoring
+All API activity will be logged, and security monitoring will be in place to detect suspicious behavior.
+Why it's important: Helps in identifying breaches, debugging issues, and auditing user activity.

@@ -128,3 +128,21 @@ Why it's important: Ensures that financial transactions are protected and reduce
 7. Logging and Monitoring
 All API activity will be logged, and security monitoring will be in place to detect suspicious behavior.
 Why it's important: Helps in identifying breaches, debugging issues, and auditing user activity.
+
+CI/CD Pipeline
+CI/CD (Continuous Integration and Continuous Deployment/Delivery) is a set of practices that automate the process of building, testing, and deploying code.
+Continuous Integration ensures that code changes are automatically tested and merged frequently.
+Continuous Deployment/Delivery automatically pushes changes to production or staging environments after passing tests.
+Why CI/CD is Important
+Faster Development: Automates repetitive tasks and speeds up the release cycle.
+Higher Quality: Automated tests catch bugs early before they reach production.
+Consistency: Ensures all environments (dev, staging, production) are predictable and consistent.
+Security: Automates security scans and linting to enforce best practices.
+Tools Used
+We plan to use the following tools for our CI/CD pipeline:
+GitHub Actions: For automating workflows such as testing, linting, and deployment.
+Docker: To containerize the application and ensure consistent behavior across environments.
+Docker Hub or GitHub Packages: For storing and managing Docker images.
+Heroku / AWS / Render (optional): For automated deployment to staging or production environments.
+
+
